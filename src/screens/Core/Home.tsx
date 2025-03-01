@@ -16,6 +16,9 @@ import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 import logo from '../../assets/logo_white.png';
 import {CoreButton} from '../../components/CoreButton';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../../App';
+import {useNavigation} from '@react-navigation/native';
 
 const PAGE_CONFIG = {
   //defaultBGColor: '#2DAA9E',
@@ -36,7 +39,13 @@ const PAGE_CONFIG = {
   defaultBGColor: '#3D8D7A',
 };
 
+type NavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'HomeScreen'
+>;
+
 export const HomeScreen = () => {
+  const navigation = useNavigation<NavigationProp>();
   const bottomSheetRef = useRef<BottomSheet>(null);
   const screenHeight = Dimensions.get('window').height;
   const bottomSheetHeight =
@@ -85,6 +94,7 @@ export const HomeScreen = () => {
                 colorText="white"
                 borderWidth={1.2}
                 textAlign="right"
+                onPress={() => navigation.navigate('RegisterLeadScreen')}
                 icon={
                   <IoniconsIcon
                     name="add-circle"
@@ -174,14 +184,14 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     backgroundColor: PAGE_CONFIG.defaultBGColor,
-    paddingTop: Platform.OS === 'android' ? RFPercentage(5) : RFPercentage(1),
+    paddingTop: Platform.OS === 'android' ? RFPercentage(2) : RFPercentage(1),
   },
   header: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    paddingHorizontal: RFPercentage(5),
+    paddingHorizontal: RFPercentage(3.5),
   },
   userInfo: {
     display: 'flex',

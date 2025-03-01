@@ -9,11 +9,13 @@ import {StyleSheet} from 'react-native';
 import {GetStartedScreen} from './src/screens/Auth/GetStartedScreen';
 import {LoginScreen} from './src/screens/Auth/LoginScreen';
 import {HomeScreen} from './src/screens/Core/Home';
+import {RegisterLeadScreen} from './src/screens/Core/Leads/RegisterLeadScreen';
 
 export type RootStackParamList = {
   GetStartedScreen: undefined;
   LoginScreen: undefined;
   HomeScreen: undefined;
+  RegisterLeadScreen: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -27,6 +29,7 @@ function RootStack() {
       <Stack.Screen name="GetStartedScreen" component={GetStartedScreen} />
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="RegisterLeadScreen" component={RegisterLeadScreen} />
     </Stack.Navigator>
   );
 }
