@@ -19,25 +19,7 @@ import {CoreButton} from '../../components/CoreButton';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../../App';
 import {useNavigation} from '@react-navigation/native';
-
-const PAGE_CONFIG = {
-  //defaultBGColor: '#2DAA9E',
-  // borderColor="#3D8D7A"
-  // defaultBGColor: 'blue',
-  // defaultBGColor: '#3D8D7A',
-  //defaultBGColor: '#7C00FE',
-  //defaultBGColor: '#151515',
-  //defaultBGColor: '#4793AF',
-  //defaultBGColor: '#89AC46',
-  //defaultBGColor: '#FFAB5B',
-  // defaultBGColor: '#EB5B00',
-  // defaultBGColor: '#3E7B27',
-  //defaultBGColor: '#F72C5B',
-  // defaultBGColor: '#87A2FF',
-  // defaultBGColor: '#6482AD',
-  //defaultBGColor: '#72BF78',
-  defaultBGColor: '#3D8D7A',
-};
+import {BOILERPLATE_CONFIG} from '../../../boilerplate';
 
 type NavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -88,7 +70,7 @@ export const HomeScreen = () => {
             <Text style={styles.accessTitle}>Acesso Rápido</Text>
             <View style={styles.buttonContainer}>
               <CoreButton
-                label="Cadastrar Contato"
+                label="Cadastrar Cliente"
                 colorBg="#2B3734"
                 borderColor="#2B3734"
                 colorText="white"
@@ -105,8 +87,8 @@ export const HomeScreen = () => {
               />
               <CoreButton
                 label="Meus Clientes"
-                colorBg={PAGE_CONFIG.defaultBGColor}
-                borderColor={PAGE_CONFIG.defaultBGColor}
+                colorBg={BOILERPLATE_CONFIG.defaultBGColor}
+                borderColor={BOILERPLATE_CONFIG.defaultBGColor}
                 colorText="#fff"
                 borderWidth={1.2}
                 icon={
@@ -120,8 +102,8 @@ export const HomeScreen = () => {
               />
               <CoreButton
                 label="Catálogo"
-                colorBg={PAGE_CONFIG.defaultBGColor}
-                borderColor={PAGE_CONFIG.defaultBGColor}
+                colorBg={BOILERPLATE_CONFIG.defaultBGColor}
+                borderColor={BOILERPLATE_CONFIG.defaultBGColor}
                 colorText="#fff"
                 borderWidth={1.2}
                 icon={
@@ -145,26 +127,26 @@ export const HomeScreen = () => {
             </Text>
             <View style={styles.buttonContainer}>
               <CoreButton
-                label="Cadastrar Contato"
+                label="Cadastrar Cliente"
                 colorBg="#fff"
-                borderColor={PAGE_CONFIG.defaultBGColor}
-                colorText={PAGE_CONFIG.defaultBGColor}
+                borderColor={BOILERPLATE_CONFIG.defaultBGColor}
+                colorText={BOILERPLATE_CONFIG.defaultBGColor}
                 borderWidth={1.2}
                 textAlign="right"
               />
               <CoreButton
                 label="Catálogo"
                 colorBg="#fff"
-                borderColor={PAGE_CONFIG.defaultBGColor}
-                colorText={PAGE_CONFIG.defaultBGColor}
+                borderColor={BOILERPLATE_CONFIG.defaultBGColor}
+                colorText={BOILERPLATE_CONFIG.defaultBGColor}
                 borderWidth={1.2}
                 textAlign="right"
               />
               <CoreButton
                 label="Catálogo"
                 colorBg="#fff"
-                borderColor={PAGE_CONFIG.defaultBGColor}
-                colorText={PAGE_CONFIG.defaultBGColor}
+                borderColor={BOILERPLATE_CONFIG.defaultBGColor}
+                colorText={BOILERPLATE_CONFIG.defaultBGColor}
                 borderWidth={1.2}
                 textAlign="right"
               />
@@ -179,11 +161,11 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: PAGE_CONFIG.defaultBGColor,
+    backgroundColor: BOILERPLATE_CONFIG.defaultBGColor,
   },
   innerContainer: {
     flex: 1,
-    backgroundColor: PAGE_CONFIG.defaultBGColor,
+    backgroundColor: BOILERPLATE_CONFIG.defaultBGColor,
     paddingTop: Platform.OS === 'android' ? RFPercentage(2) : RFPercentage(1),
   },
   header: {

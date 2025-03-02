@@ -1,4 +1,10 @@
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {
+  KeyboardTypeOptions,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 
 type IInputProps = {
@@ -8,15 +14,17 @@ type IInputProps = {
   colorBg?: string;
   label?: string;
   secureTextEntry?: boolean;
+  keyboardType?: KeyboardTypeOptions;
 };
 
 export const Input = ({
   placeholder,
   colorBg,
-  colorText,
+  colorText = '#727D73',
   onPress,
   label,
   secureTextEntry,
+  keyboardType = 'default',
 }: IInputProps) => {
   return (
     <View style={styles.container}>
@@ -30,6 +38,7 @@ export const Input = ({
         placeholderTextColor={colorText}
         onPress={onPress}
         secureTextEntry={secureTextEntry}
+        keyboardType={keyboardType}
       />
     </View>
   );
