@@ -12,6 +12,7 @@ import {BOILERPLATE_CONFIG} from '../../../../boilerplate';
 import {Input} from '../../../components/Input';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Button} from '../../../components/Button';
+import {ModalBeforePhotos} from './ModalBeforePhotos';
 
 export const RegisterLeadScreen: React.FC = () => {
   return (
@@ -67,6 +68,7 @@ export const RegisterLeadScreen: React.FC = () => {
           colorText="#FFF"
         />
       </ScrollView>
+      <ModalBeforePhotos />
     </Container>
   );
 };
@@ -74,11 +76,11 @@ export const RegisterLeadScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
-    paddingHorizontal: RFPercentage(4),
   },
   scrollContent: {
     flexGrow: 1,
     paddingBottom: RFPercentage(5), // Ensures space at the bottom for scrolling
+    paddingHorizontal: RFPercentage(4),
   },
   title: {
     width: '80%',

@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
     paddingTop: RFPercentage(2.5),
   },
   header: {
+    position: 'relative',
     width: '100%',
     flexDirection: 'row',
     marginBottom: RFPercentage(4),
-    position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
   } as ViewStyle,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: RFPercentage(2),
     position: 'absolute',
-    left: 0,
+    left: RFPercentage(2.7),
   } as ViewStyle,
   title: {
     fontWeight: '500',
